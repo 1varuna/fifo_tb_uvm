@@ -1,0 +1,140 @@
+$date
+	Sat Jul 25 19:36:30 2020
+$end
+$version
+	QuestaSim Version 10.4e
+$end
+$timescale
+	1ns
+$end
+
+$scope module fifo_top $end
+$var reg 1 ! clk $end
+$var wire 1 " wr_en $end
+$var wire 1 # rd_en $end
+$var wire 1 $ data_in [31] $end
+$var wire 1 % data_in [30] $end
+$var wire 1 & data_in [29] $end
+$var wire 1 ' data_in [28] $end
+$var wire 1 ( data_in [27] $end
+$var wire 1 ) data_in [26] $end
+$var wire 1 * data_in [25] $end
+$var wire 1 + data_in [24] $end
+$var wire 1 , data_in [23] $end
+$var wire 1 - data_in [22] $end
+$var wire 1 . data_in [21] $end
+$var wire 1 / data_in [20] $end
+$var wire 1 0 data_in [19] $end
+$var wire 1 1 data_in [18] $end
+$var wire 1 2 data_in [17] $end
+$var wire 1 3 data_in [16] $end
+$var wire 1 4 data_in [15] $end
+$var wire 1 5 data_in [14] $end
+$var wire 1 6 data_in [13] $end
+$var wire 1 7 data_in [12] $end
+$var wire 1 8 data_in [11] $end
+$var wire 1 9 data_in [10] $end
+$var wire 1 : data_in [9] $end
+$var wire 1 ; data_in [8] $end
+$var wire 1 < data_in [7] $end
+$var wire 1 = data_in [6] $end
+$var wire 1 > data_in [5] $end
+$var wire 1 ? data_in [4] $end
+$var wire 1 @ data_in [3] $end
+$var wire 1 A data_in [2] $end
+$var wire 1 B data_in [1] $end
+$var wire 1 C data_in [0] $end
+$var wire 1 D data_out [31] $end
+$var wire 1 E data_out [30] $end
+$var wire 1 F data_out [29] $end
+$var wire 1 G data_out [28] $end
+$var wire 1 H data_out [27] $end
+$var wire 1 I data_out [26] $end
+$var wire 1 J data_out [25] $end
+$var wire 1 K data_out [24] $end
+$var wire 1 L data_out [23] $end
+$var wire 1 M data_out [22] $end
+$var wire 1 N data_out [21] $end
+$var wire 1 O data_out [20] $end
+$var wire 1 P data_out [19] $end
+$var wire 1 Q data_out [18] $end
+$var wire 1 R data_out [17] $end
+$var wire 1 S data_out [16] $end
+$var wire 1 T data_out [15] $end
+$var wire 1 U data_out [14] $end
+$var wire 1 V data_out [13] $end
+$var wire 1 W data_out [12] $end
+$var wire 1 X data_out [11] $end
+$var wire 1 Y data_out [10] $end
+$var wire 1 Z data_out [9] $end
+$var wire 1 [ data_out [8] $end
+$var wire 1 \ data_out [7] $end
+$var wire 1 ] data_out [6] $end
+$var wire 1 ^ data_out [5] $end
+$var wire 1 _ data_out [4] $end
+$var wire 1 ` data_out [3] $end
+$var wire 1 a data_out [2] $end
+$var wire 1 b data_out [1] $end
+$var wire 1 c data_out [0] $end
+$var wire 1 d empty $end
+$var wire 1 e full $end
+$var reg 1 f rstN $end
+
+$scope module DUT $end
+$var parameter 32 g FIFO_WIDTH $end
+$var parameter 32 h FIFO_DEPTH $end
+$var wire 1 i clk $end
+$var reg 1 j rstN $end
+$var reg 1 k wr_en $end
+$var reg 1 l rd_en $end
+$var reg 32 m data_in [31:0] $end
+$var reg 32 n data_out [31:0] $end
+$var reg 1 o empty $end
+$var reg 1 p tmp_empty $end
+$var reg 1 q full $end
+$var reg 1 r tmp_full $end
+$var integer 32 s write_ptr $end
+$var integer 32 t read_ptr $end
+
+$scope module b_assertions $end
+$var parameter 32 u FIFO_WIDTH $end
+$var wire 1 i clk $end
+$var wire 1 v rstN $end
+$var wire 1 w wr_en $end
+$var wire 1 x rd_en $end
+$var wire 1 y data_in [31] $end
+$var wire 1 z data_in [30] $end
+$var wire 1 { data_in [29] $end
+$var wire 1 | data_in [28] $end
+$var wire 1 } data_in [27] $end
+$var wire 1 ~ data_in [26] $end
+$var wire 1 !! data_in [25] $end
+$var wire 1 "! data_in [24] $end
+$var wire 1 #! data_in [23] $end
+$var wire 1 $! data_in [22] $end
+$var wire 1 %! data_in [21] $end
+$var wire 1 &! data_in [20] $end
+$var wire 1 '! data_in [19] $end
+$var wire 1 (! data_in [18] $end
+$var wire 1 )! data_in [17] $end
+$var wire 1 *! data_in [16] $end
+$var wire 1 +! data_in [15] $end
+$var wire 1 ,! data_in [14] $end
+$var wire 1 -! data_in [13] $end
+$var wire 1 .! data_in [12] $end
+$var wire 1 /! data_in [11] $end
+$var wire 1 0! data_in [10] $end
+$var wire 1 1! data_in [9] $end
+$var wire 1 2! data_in [8] $end
+$var wire 1 3! data_in [7] $end
+$var wire 1 4! data_in [6] $end
+$var wire 1 5! data_in [5] $end
+$var wire 1 6! data_in [4] $end
+$var wire 1 7! data_in [3] $end
+$var wire 1 8! data_in [2] $end
+$var wire 1 9! data_in [1] $end
+$var wire 1 :! data_in [0] $end
+$var wire 1 ;! data_out [31] $end
+$var wire 1 <! data_out [30] $end
+$var wire 1 =! data_out [29] $end
+$var wire 1 >! data_out [28] $en
