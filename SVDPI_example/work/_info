@@ -1,0 +1,42 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/Programming/FIFO_TB_UVM/SVDPI_example
+T_opt
+!s110 1596126958
+VDMJSE2bz?HCY41B2mOU]a0
+04 6 4 work sv_dpi fast 0
+=1-705a0fc01893-5f22f6ec-341-2860
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.4e;61
+R0
+vsv_dpi
+DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+!s110 1596131011
+!i10b 1
+!s100 <6gaIf[UElk8nHc0kEKR]0
+I=JPnYXciACZB:h0YGCj<l2
+VDg1SIo80bB@j0V0VzS_@n1
+!s105 sv_dpi_ex_sv_unit
+S1
+R0
+w1596128752
+8sv_dpi_ex.sv
+Fsv_dpi_ex.sv
+L0 1
+OL;L;10.4e;61
+r1
+!s85 0
+31
+!s108 1596131011.000000
+!s107 sv_dpi_ex.sv|
+!s90 -reportprogress|300|-sv|-dpiheader|svdpi.h|sv_dpi_ex.sv|sv_dpi_ex.c|
+!i113 0
+o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact

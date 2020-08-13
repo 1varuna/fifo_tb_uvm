@@ -2,7 +2,7 @@
 * File: fifo_seq_item.sv
 * Author: Varun Anand
 * Mentor: Varsha Anand, Verification Engineer
-* Description: Transaction class containing randomizable data members
+* Description: "Transaction class" containing randomizable data members
 * and constraints.
 */
 class fifo_seq_item #(parameter FIFO_WIDTH=32) extends uvm_sequence_item;
@@ -17,6 +17,10 @@ class fifo_seq_item #(parameter FIFO_WIDTH=32) extends uvm_sequence_item;
 	logic full,empty;	
 
 	// Utility/Field Macros
+	// Why ? 
+	// Can use it with std in-built functions
+	// like copy, clone etc.
+
 	`uvm_object_utils_begin(fifo_seq_item)
 		`uvm_field_int(data_in,	UVM_ALL_ON)	
 		`uvm_field_int(wr_en,	UVM_ALL_ON)	

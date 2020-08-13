@@ -37,7 +37,7 @@ class fifo_drv extends uvm_driver;
 	endtask 
 
 
-	task drive_item(fifo_seq_item trans);		// This task puts generated pkts from gen to drv
+	task drive_item(fifo_seq_item trans);		// This task (user-defined) puts generated pkts from gen to drv
 
 			`DRV_IF.wr_en<=0;
 

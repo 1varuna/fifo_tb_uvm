@@ -15,7 +15,8 @@ class fifo_test_uvm extends uvm_test;
 
 	virtual function void build_phase(uvm_phase phase);	// *_phase() signature always accepts uvm_phase type as input
 		super.build_phase(phase);
-		env = fifo_env#(`DEF_FIFO_WIDTH,`DEF_FIFO_DEPTH)::type_id::create("fifo_env",this);	
+		env = fifo_env#(`DEF_FIFO_WIDTH,`DEF_FIFO_DEPTH)::type_id::create("fifo_env",this);
+		// base_seq need not be created here	
 	endfunction
 
 	task run_phase(uvm_phase phase);
@@ -23,9 +24,9 @@ class fifo_test_uvm extends uvm_test;
 		`uvm_info(get_type_name(),"Test RUN phase",UVM_LOW)
 		base_seq = fifo_base_seq#(`DEF_FIFO_WIDTH)::type_id::create("fifo_base_seq");
 		
-		phase.raise_objection(this);
+		phase.raise_objection(this);		// IMPORTANT : 
 		base_seq.start(env.fifo_ag.seqr);
-		phase.drop_objection(this);
+		phase.drop_objection(this);		// IMPORTANT
 		
 	endtask
 

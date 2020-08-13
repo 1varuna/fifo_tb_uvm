@@ -77,12 +77,12 @@ module fifo_top;		// Testbench top file
 	string test_name;
 
 	//write_only_test t1(intf);
-	write_read_test t1(intf);
+	//write_read_test t1(intf);
 	//test t1(intf);
 
 	initial begin		// NEWLY ADDED FOR UVM
 		uvm_config_db #(virtual fifo_intf)::set(null,"uvm_test_top","fifo_intf",intf);
-		run_test();		// CommandLine option: +UVM_TESTNAME
+		run_test();		// BUILT IN FUNCTION : CommandLine option: +UVM_TESTNAME
 	end
 
 	initial begin			// for dumping signals
