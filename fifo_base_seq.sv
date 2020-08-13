@@ -9,7 +9,7 @@
        class fifo_base_seq #(parameter FIFO_WIDTH=32, parameter FIFO_DEPTH=2**5) extends uvm_sequence #(fifo_seq_item);
 
 	       // Register Sequence in UVM Factory
-	       `uvm_object_utils(fifo_base_seq)
+	       `uvm_object_param_utils(fifo_base_seq #(FIFO_WIDTH,FIFO_DEPTH))
 
        		function new(string name="fifo_base_seq");		// fifo_base_seq class constructor 
 	       		super.new(name);

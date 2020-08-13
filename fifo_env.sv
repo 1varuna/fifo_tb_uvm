@@ -12,7 +12,7 @@
 
 class fifo_env #(parameter FIFO_WIDTH = 32,parameter FIFO_DEPTH=32) extends uvm_env;
 
-	`uvm_component_utils(fifo_env)
+	`uvm_component_param_utils(fifo_env #(FIFO_WIDTH,FIFO_DEPTH))
 
 	fifo_sb sb;								// Fifo Scoreboard
 	fifo_agent fifo_ag;
@@ -30,8 +30,8 @@ class fifo_env #(parameter FIFO_WIDTH = 32,parameter FIFO_DEPTH=32) extends uvm_
 	endfunction
 
 	virtual function void connect_phase(uvm_phase phase);		// Connect sequencer and driver
-		fifo_ag.in_mon.ap.connect(sb.in_mon2sb.analysis_export);	
-		fifo_ag.out_mon.ap.connect(sb.out_mon2sb.analysis_export);	
+		fifo_ag.in_mon.ap.connect(sb.in_mon_fifo.analysis_export);	
+		fifo_ag.out_mon.ap.connect(sb.out_mon_fifo.analysis_export);	
 	endfunction
 	
 endclass
