@@ -6,7 +6,7 @@
 * send a write request and input data into DUT. 
 */
 
-class fifo_drv extends uvm_driver;
+class fifo_drv extends uvm_driver #(fifo_seq_item);
 
 	`uvm_component_utils(fifo_drv)
 

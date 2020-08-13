@@ -9,7 +9,7 @@
 `ifndef FIFO_SLAVE
 `define FIFO_SLAVE
 
-class fifo_slv_drv extends uvm_driver;
+class fifo_slv_drv extends uvm_driver #(fifo_seq_item);
 	
 	`uvm_component_utils(fifo_slv_drv)	
 
