@@ -7,6 +7,7 @@
 */
 class fifo_seq_item #(parameter FIFO_WIDTH=32) extends uvm_sequence_item;
 
+	//`uvm_object_utils(fifo_seq_item)
 	`define S_DATA (2**((FIFO_WIDTH)/4))	// Defining range for small data values	
 	`define M_DATA (2**((FIFO_WIDTH)/2))	// Defining range for medium data values	
 	`define L_DATA (2**(FIFO_WIDTH))	// Defining range for large data values	
@@ -21,6 +22,7 @@ class fifo_seq_item #(parameter FIFO_WIDTH=32) extends uvm_sequence_item;
 	// Can use it with std in-built functions
 	// like copy, clone etc.
 
+	
 	`uvm_object_utils_begin(fifo_seq_item)
 		`uvm_field_int(data_in,	UVM_ALL_ON)	
 		`uvm_field_int(wr_en,	UVM_ALL_ON)	
@@ -29,7 +31,7 @@ class fifo_seq_item #(parameter FIFO_WIDTH=32) extends uvm_sequence_item;
 		`uvm_field_int(full,	UVM_ALL_ON)	
 		`uvm_field_int(empty,	UVM_ALL_ON)	
 	`uvm_object_utils_end
-
+	
 	function new(string name = "fifo_seq_item");
 		super.new(name);
 	endfunction

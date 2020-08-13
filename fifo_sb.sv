@@ -10,8 +10,8 @@
 
 	       `uvm_component_utils(fifo_sb)
 
-	       uvm_tlm_analysis_fifo #(fifo_seq_item) in_mon2sb;
-	       uvm_tlm_analysis_fifo #(fifo_seq_item) out_mon2sb;
+	       uvm_tlm_analysis_fifo #(fifo_seq_item) in_mon_fifo;
+	       uvm_tlm_analysis_fifo #(fifo_seq_item) out_mon_fifo;
 
 	       // Initialize counter variable to keep 
 	       // track of transactions processed
@@ -24,8 +24,8 @@
 
 		virtual function void build_phase(uvm_phase phase);	// *_phase() signature always accepts uvm_phase type as input
 			super.build_phase(phase);
-			in_mon2sb = new ("in_mon2sb",this);
-			out_mon2sb = new ("out_mon2sb",this);
+			in_mon_fifo = new ("in_mon_fifo",this);
+			out_mon_fifo = new ("out_mon_fifo",this);
 		endfunction
 
 	       // Declare queues to save incoming
@@ -63,7 +63,7 @@
 		      in_trans = new();
 		      $display("\t SCOREBOARD:: Inside in_queue() \n");
 		      forever begin
-			      in_mon2sb.get(in_trans);
+			      in_mon_fifo.get(in_trans);
 			      $display("\tSCOREBOARD::in_queue() : Transaction info: wr_en = %0d, rd_en = %0d, data_in=%0d\n",in_trans.wr_en,in_trans.rd_en,in_trans.data_in);
 			      begin
 				      wr_en_q.push_back(in_trans.wr_en);
@@ -80,6 +80,7 @@
 		      out_trans = new();
 		      $display("\t SCOREBOARD:: Inside out_queue() \n");
 		      forever begin
+			      out_mon_fifo.get(out_trans);
 			      $display("\tSCOREBOARD::out_queue() : Transaction info: wr_en = %0d, rd_en = %0d, data_out=%0d, full : %0d, empty: %0d\n",out_trans.wr_en,out_trans.rd_en,out_trans.data_out,out_trans.full,out_trans.empty);
 				      rd_en_out_q.push_back(out_trans.rd_en);	// forcing wr_en to 0
 				      out_stream_q.push_back(out_trans.data_out);	// forcing wr_en to 0

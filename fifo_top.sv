@@ -81,7 +81,8 @@ module fifo_top;		// Testbench top file
 	//test t1(intf);
 
 	initial begin		// NEWLY ADDED FOR UVM
-		uvm_config_db #(virtual fifo_intf)::set(null,"uvm_test_top","fifo_intf",intf);
+		//uvm_config_db #(virtual fifo_intf)::set(null,"uvm_test_top*","fifo_intf",intf);		// Added * on 13/08/2020
+		uvm_config_db #(virtual fifo_intf)::set(null,"*fifo_ag*","fifo_intf",intf);		// Added * on 13/08/2020
 		run_test();		// BUILT IN FUNCTION : CommandLine option: +UVM_TESTNAME
 	end
 
