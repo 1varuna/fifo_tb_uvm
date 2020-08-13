@@ -14,10 +14,11 @@ class fifo_input_mon extends uvm_monitor;
 	
 	`uvm_component_utils(fifo_input_mon)	
 	virtual fifo_intf fifo_vif;
-	uvm_analysis_port ap;
+	uvm_analysis_port #(fifo_seq_item) ap;
 
 	function new (string name,uvm_component parent);	// Class constructor
 		super.new(name,parent);			// UVM Monitor - parent
+		ap = new("ap",this);
 	endfunction
 
 	virtual function void build_phase(uvm_phase phase);	// *_phase() signature always accepts uvm_phase type as input
