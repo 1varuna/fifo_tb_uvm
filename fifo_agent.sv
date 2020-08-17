@@ -22,7 +22,7 @@ class fifo_agent extends uvm_agent;
 		// build sequencer, driver and monitor classes using "create"
 		drv = fifo_drv::type_id::create("drv",this);
 		seqr = uvm_sequencer#(fifo_seq_item)::type_id::create("seqr",this);
-		slv_drv = fifo_slv_drv::type_id::create("slv_drv",this);
+		//slv_drv = fifo_slv_drv::type_id::create("slv_drv",this);
 		end
 
 		in_mon = fifo_input_mon::type_id::create("in_mon",this);
