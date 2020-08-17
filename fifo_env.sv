@@ -26,7 +26,9 @@ class fifo_env #(parameter FIFO_WIDTH = 32,parameter FIFO_DEPTH=32) extends uvm_
 	virtual function void build_phase(uvm_phase phase);	// *_phase() signature always accepts uvm_phase type as input
 		super.build_phase(phase);
 		sb = fifo_sb#(FIFO_WIDTH,FIFO_DEPTH)::type_id::create("sb",this);	
-		fifo_ag = fifo_agent::type_id::create("fifo_ag",this);	
+		fifo_ag = fifo_agent::type_id::create("fifo_ag",this);
+		//uvm_config_db #(int) :: set (this, "fifo_ag*", "is_active", 1);
+      		fifo_ag.is_active = UVM_ACTIVE;	
 	endfunction
 
 	virtual function void connect_phase(uvm_phase phase);		// Connect sequencer and driver
