@@ -8,11 +8,11 @@
 */
 
 interface fifo_intf #(parameter FIFO_WIDTH=32, parameter FIFO_DEPTH=(2**5))(
-	input logic clk,				// input clock
-	input logic rstN,				//active low reset
-	input logic wr_en,				// write enable
-	input logic [FIFO_WIDTH-1:0] data_in,		// Input Data
-	input logic rd_en,				// read enable
+	input clk,				// input clock
+	input rstN,				//active low reset
+	input wr_en,				// write enable
+	input [FIFO_WIDTH-1:0] data_in,		// Input Data
+	input rd_en,				// read enable
 	output logic empty,				// fifo empty
 	output logic full,				// fifo full
 	output logic [FIFO_WIDTH-1:0] data_out	// Output data
