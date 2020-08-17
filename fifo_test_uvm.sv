@@ -2,6 +2,8 @@
 *	ADD File description
 */
 
+`ifndef FIFO_TEST_UVM
+`define FIFO_TEST_UVM
 class fifo_test_uvm extends uvm_test;
 	
 	`uvm_component_utils(fifo_test_uvm)
@@ -22,12 +24,16 @@ class fifo_test_uvm extends uvm_test;
 	task run_phase(uvm_phase phase);
 		super.run_phase(phase);
 		`uvm_info(get_type_name(),"Test RUN phase",UVM_LOW)
+		`uvm_info(get_type_name(),"Before Creating base seq",UVM_LOW)
 		base_seq = fifo_base_seq#(`DEF_FIFO_WIDTH)::type_id::create("fifo_base_seq");
+		`uvm_info(get_type_name(),"Created a base sequence here",UVM_LOW)
 		
-		phase.raise_objection(this);		// IMPORTANT : 
+		phase.raise_objection(this);		// IMPORTANT :
+		`uvm_info(get_type_name(),"Before Starting Sequence",UVM_LOW)
 		base_seq.start(env.fifo_ag.seqr);
 		phase.drop_objection(this);		// IMPORTANT
-		
+		`uvm_info(get_type_name(),"After dropping objection",UVM_LOW)		
 	endtask
 
 endclass
+`endif
