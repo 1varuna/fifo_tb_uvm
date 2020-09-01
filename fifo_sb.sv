@@ -77,7 +77,7 @@
 	      task out_queue;
 		      fifo_seq_item out_trans;	// Incoming trans from output monitor
 		      out_trans = new();
-		      $display("\t SCOREBOARD:: Inside out_queue() \n");
+		      //$display("\t SCOREBOARD:: Inside out_queue() \n");
 		      forever begin
 			      out_mon_fifo.get(out_trans);
 			      $display("\tSCOREBOARD::out_queue() : Transaction info: wr_en = %0d, rd_en = %0d, data_out=%0d, full : %0d, empty: %0d\n",out_trans.wr_en,out_trans.rd_en,out_trans.data_out,out_trans.full,out_trans.empty);

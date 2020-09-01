@@ -17,7 +17,7 @@
 //import fifo_tb_pkg::*;
 
 import uvm_pkg::*;
-`include "fifo_intf.sv"
+//`include "fifo_intf.sv"
 `include "fifo_assertions.sv"
 `include "test_suite.sv"
 
@@ -84,11 +84,13 @@ module fifo_top;		// Testbench top file
 	initial begin		// NEWLY ADDED FOR UVM
 		//uvm_config_db #(virtual fifo_intf)::set(null,"uvm_test_top*","fifo_intf",intf);		// Added * on 13/08/2020
 		uvm_config_db #(virtual fifo_intf)::set(null,"*fifo_ag*","fifo_intf",intf);		// Added * on 13/08/2020
-		run_test();		// BUILT IN FUNCTION : CommandLine option: +UVM_TESTNAME
+		run_test("fifo_test_uvm");		// BUILT IN FUNCTION : CommandLine option: +UVM_TESTNAME
 	end
 
+	/*	UNCOMMENT to dump signals
 	initial begin			// for dumping signals
 		$dumpfile("dump.wlf");
 		$dumpvars;
 	end
+	*/
 endmodule

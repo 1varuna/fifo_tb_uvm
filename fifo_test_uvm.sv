@@ -22,7 +22,11 @@ class fifo_test_uvm extends uvm_test;
 		env = fifo_env#(`DEF_FIFO_WIDTH,`DEF_FIFO_DEPTH)::type_id::create("fifo_env",this);
 		// base_seq need not be created here	
 	endfunction
-
+	
+	virtual function void end_of_elaboration_phase (uvm_phase phase);
+      	uvm_top.print_topology ();
+   	endfunction
+	
 	virtual task run_phase(uvm_phase phase);
 		super.run_phase(phase);
 		`uvm_info(get_type_name(),"Test RUN phase",UVM_LOW)

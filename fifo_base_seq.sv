@@ -15,7 +15,6 @@
        		endfunction 
 
 	       rand int num_data;			// Random number of data packets to be generated
-		
 	       constraint num_data_c{		// constraint on volume of data generation
 		       num_data inside {
 		       [25:FIFO_DEPTH]
@@ -24,11 +23,13 @@
 
        int mode_val = 1;			// Control randomization of trans rand variables
        string test = "rand";			// Default value - can be over written in test
+	int num_c = 30;			// Random number of data packets to be generated
 
        // Newly added for UVM
        virtual task body();		       // create, randomize and send seq_item
-       		`uvm_info(get_type_name(),$sformatf("Value of num_data is %0d",num_data),UVM_LOW)
-       		repeat(num_data) begin
+       		//`uvm_info(get_type_name(),$sformatf("Value of num_data is %0d",num_data),UVM_LOW)
+       		`uvm_info(get_type_name(),$sformatf("Value of num_c is %0d",num_c),UVM_LOW)
+       		repeat(num_c) begin
 			`uvm_do(req);		// Creates sequence item, randomizes it and sends to driver
 		/*
        		req = fifo_seq_item#(FIFO_WIDTH)::type_id::create("req");		// req is the instantiation of the fifo_seq_item inherited from fifo_base_seq class
