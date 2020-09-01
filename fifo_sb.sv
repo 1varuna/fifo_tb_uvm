@@ -124,12 +124,10 @@
 
       task run_phase(uvm_phase phase);
 		super.run_phase(phase);
-	      forever begin
 		      fork
 			      in_queue;
 			      out_queue;
 			      main_check;
 		      join_none
-	      end
       endtask
 endclass
