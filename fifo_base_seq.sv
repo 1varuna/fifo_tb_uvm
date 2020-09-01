@@ -1,7 +1,6 @@
 /*
 * File: fifo_base_seq.sv
 * Author: Varun Anand
-* Mentor: Varsha Anand, Verification Engineer
 * Description: Generator class which generates input transactions
 * and puts it onto a mailbox for the master and slave driver. 
 	*/
@@ -28,11 +27,15 @@
 
        // Newly added for UVM
        virtual task body();		       // create, randomize and send seq_item
+       		`uvm_info(get_type_name(),$sformatf("Value of num_data is %0d",num_data),UVM_LOW)
        		repeat(num_data) begin
+			`uvm_do(req);		// Creates sequence item, randomizes it and sends to driver
+		/*
        		req = fifo_seq_item#(FIFO_WIDTH)::type_id::create("req");		// req is the instantiation of the fifo_seq_item inherited from fifo_base_seq class
 		assert(req.randomize());
 		send_request(req);
 		wait_for_item_done();
+		*/
 		end
        endtask
 

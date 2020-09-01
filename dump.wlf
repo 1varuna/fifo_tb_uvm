@@ -1,5 +1,5 @@
 $date
-	Sat Jul 25 19:36:30 2020
+	Tue Sep 01 13:17:05 2020
 $end
 $version
 	QuestaSim Version 10.4e
@@ -7,6 +7,9 @@ $end
 $timescale
 	1ns
 $end
+
+$scope module uvm_root $end
+$upscope $end
 
 $scope module fifo_top $end
 $var reg 1 ! clk $end
@@ -137,4 +140,291 @@ $var wire 1 :! data_in [0] $end
 $var wire 1 ;! data_out [31] $end
 $var wire 1 <! data_out [30] $end
 $var wire 1 =! data_out [29] $end
-$var wire 1 >! data_out [28] $en
+$var wire 1 >! data_out [28] $end
+$var wire 1 ?! data_out [27] $end
+$var wire 1 @! data_out [26] $end
+$var wire 1 A! data_out [25] $end
+$var wire 1 B! data_out [24] $end
+$var wire 1 C! data_out [23] $end
+$var wire 1 D! data_out [22] $end
+$var wire 1 E! data_out [21] $end
+$var wire 1 F! data_out [20] $end
+$var wire 1 G! data_out [19] $end
+$var wire 1 H! data_out [18] $end
+$var wire 1 I! data_out [17] $end
+$var wire 1 J! data_out [16] $end
+$var wire 1 K! data_out [15] $end
+$var wire 1 L! data_out [14] $end
+$var wire 1 M! data_out [13] $end
+$var wire 1 N! data_out [12] $end
+$var wire 1 O! data_out [11] $end
+$var wire 1 P! data_out [10] $end
+$var wire 1 Q! data_out [9] $end
+$var wire 1 R! data_out [8] $end
+$var wire 1 S! data_out [7] $end
+$var wire 1 T! data_out [6] $end
+$var wire 1 U! data_out [5] $end
+$var wire 1 V! data_out [4] $end
+$var wire 1 W! data_out [3] $end
+$var wire 1 X! data_out [2] $end
+$var wire 1 Y! data_out [1] $end
+$var wire 1 Z! data_out [0] $end
+$var wire 1 [! empty $end
+$var wire 1 \! full $end
+$var wire 1 ]! write_ptr [31] $end
+$var wire 1 ^! write_ptr [30] $end
+$var wire 1 _! write_ptr [29] $end
+$var wire 1 `! write_ptr [28] $end
+$var wire 1 a! write_ptr [27] $end
+$var wire 1 b! write_ptr [26] $end
+$var wire 1 c! write_ptr [25] $end
+$var wire 1 d! write_ptr [24] $end
+$var wire 1 e! write_ptr [23] $end
+$var wire 1 f! write_ptr [22] $end
+$var wire 1 g! write_ptr [21] $end
+$var wire 1 h! write_ptr [20] $end
+$var wire 1 i! write_ptr [19] $end
+$var wire 1 j! write_ptr [18] $end
+$var wire 1 k! write_ptr [17] $end
+$var wire 1 l! write_ptr [16] $end
+$var wire 1 m! write_ptr [15] $end
+$var wire 1 n! write_ptr [14] $end
+$var wire 1 o! write_ptr [13] $end
+$var wire 1 p! write_ptr [12] $end
+$var wire 1 q! write_ptr [11] $end
+$var wire 1 r! write_ptr [10] $end
+$var wire 1 s! write_ptr [9] $end
+$var wire 1 t! write_ptr [8] $end
+$var wire 1 u! write_ptr [7] $end
+$var wire 1 v! write_ptr [6] $end
+$var wire 1 w! write_ptr [5] $end
+$var wire 1 x! write_ptr [4] $end
+$var wire 1 y! write_ptr [3] $end
+$var wire 1 z! write_ptr [2] $end
+$var wire 1 {! write_ptr [1] $end
+$var wire 1 |! write_ptr [0] $end
+$var wire 1 }! read_ptr [31] $end
+$var wire 1 ~! read_ptr [30] $end
+$var wire 1 !" read_ptr [29] $end
+$var wire 1 "" read_ptr [28] $end
+$var wire 1 #" read_ptr [27] $end
+$var wire 1 $" read_ptr [26] $end
+$var wire 1 %" read_ptr [25] $end
+$var wire 1 &" read_ptr [24] $end
+$var wire 1 '" read_ptr [23] $end
+$var wire 1 (" read_ptr [22] $end
+$var wire 1 )" read_ptr [21] $end
+$var wire 1 *" read_ptr [20] $end
+$var wire 1 +" read_ptr [19] $end
+$var wire 1 ," read_ptr [18] $end
+$var wire 1 -" read_ptr [17] $end
+$var wire 1 ." read_ptr [16] $end
+$var wire 1 /" read_ptr [15] $end
+$var wire 1 0" read_ptr [14] $end
+$var wire 1 1" read_ptr [13] $end
+$var wire 1 2" read_ptr [12] $end
+$var wire 1 3" read_ptr [11] $end
+$var wire 1 4" read_ptr [10] $end
+$var wire 1 5" read_ptr [9] $end
+$var wire 1 6" read_ptr [8] $end
+$var wire 1 7" read_ptr [7] $end
+$var wire 1 8" read_ptr [6] $end
+$var wire 1 9" read_ptr [5] $end
+$var wire 1 :" read_ptr [4] $end
+$var wire 1 ;" read_ptr [3] $end
+$var wire 1 <" read_ptr [2] $end
+$var wire 1 =" read_ptr [1] $end
+$var wire 1 >" read_ptr [0] $end
+
+$scope begin a_reset $end
+$upscope $end
+
+$scope begin a_wr_rd_enable $end
+$upscope $end
+
+$scope begin a_invalid_rd_empty $end
+$upscope $end
+
+$scope begin a_invalid_wr_full $end
+$upscope $end
+
+$scope begin a_empty_ptr $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+
+$scope begin uvm_pkg $end
+$var parameter 32 ?" UVM_HDL_MAX_WIDTH $end
+$var parameter 32 @" UVM_STREAMBITS $end
+$var parameter 32 A" UVM_RADIX $end
+$var parameter 32 B" UVM_MACRO_NUMFLAGS $end
+$var parameter 32 C" UVM_DEFAULT $end
+$var parameter 32 D" UVM_ALL_ON $end
+$var parameter 32 E" UVM_FLAGS_ON $end
+$var parameter 32 F" UVM_FLAGS_OFF $end
+$var parameter 32 G" UVM_COPY $end
+$var parameter 32 H" UVM_NOCOPY $end
+$var parameter 32 I" UVM_COMPARE $end
+$var parameter 32 J" UVM_NOCOMPARE $end
+$var parameter 32 K" UVM_PRINT $end
+$var parameter 32 L" UVM_NOPRINT $end
+$var parameter 32 M" UVM_RECORD $end
+$var parameter 32 N" UVM_NORECORD $end
+$var parameter 32 O" UVM_PACK $end
+$var parameter 32 P" UVM_NOPACK $end
+$var parameter 32 Q" UVM_PHYSICAL $end
+$var parameter 32 R" UVM_ABSTRACT $end
+$var parameter 32 S" UVM_READONLY $end
+$var parameter 32 T" UVM_NODEFPRINT $end
+$var parameter 32 U" UVM_MACRO_EXTRAS $end
+$var parameter 32 V" UVM_FLAGS $end
+$var parameter 32 W" UVM_UNPACK $end
+$var parameter 32 X" UVM_CHECK_FIELDS $end
+$var parameter 32 Y" UVM_END_DATA_EXTRA $end
+$var parameter 32 Z" UVM_START_FUNCS $end
+$var parameter 32 [" UVM_SET $end
+$var parameter 32 \" UVM_SETINT $end
+$var parameter 32 ]" UVM_SETOBJ $end
+$var parameter 32 ^" UVM_SETSTR $end
+$var parameter 32 _" UVM_END_FUNCS $end
+$var parameter 32 `" UVM_STR_CRC_POLYNOMIAL $end
+$var parameter 32 a" UVM_STDOUT $end
+$var parameter 32 b" UVM_LINE_WIDTH $end
+$var parameter 32 c" UVM_NUM_LINES $end
+$var parameter 32 d" UVM_SMALL_STRING $end
+$var parameter 32 e" UVM_LARGE_STRING $end
+$var reg 1 f" uvm_start_uvm_declarations $end
+$var integer 32 g" uvm_global_random_seed $end
+$var integer 32 h" UVM_UNBOUNDED_CONNECTIONS $end
+
+$scope function uvm_hdl_check_path $end
+$var integer 32 i" uvm_hdl_check_path $end
+$upscope $end
+
+$scope function uvm_hdl_deposit $end
+$var integer 32 j" uvm_hdl_deposit $end
+$var reg 1024 k" value [1023:0] $end
+$upscope $end
+
+$scope function uvm_hdl_force $end
+$var integer 32 l" uvm_hdl_force $end
+$var reg 1024 m" value [1023:0] $end
+$upscope $end
+
+$scope task uvm_hdl_force_time $end
+$var reg 1024 n" value [1023:0] $end
+$var time 64 o" force_time $end
+$upscope $end
+
+$scope function uvm_hdl_release_and_read $end
+$var integer 32 p" uvm_hdl_release_and_read $end
+$var reg 1024 q" value [1023:0] $end
+$upscope $end
+
+$scope function uvm_hdl_release $end
+$var integer 32 r" uvm_hdl_release $end
+$upscope $end
+
+$scope function uvm_hdl_read $end
+$var integer 32 s" uvm_hdl_read $end
+$var reg 1024 t" value [1023:0] $end
+$upscope $end
+
+$scope function uvm_dpi_get_next_arg_c $end
+$upscope $end
+
+$scope function uvm_dpi_get_tool_name_c $end
+$upscope $end
+
+$scope function uvm_dpi_get_tool_version_c $end
+$upscope $end
+
+$scope function uvm_dpi_get_next_arg $end
+$upscope $end
+
+$scope function uvm_dpi_get_tool_name $end
+$upscope $end
+
+$scope function uvm_dpi_get_tool_version $end
+$upscope $end
+
+$scope function uvm_dpi_regcomp $end
+$upscope $end
+
+$scope function uvm_dpi_regexec $end
+$var integer 32 u" uvm_dpi_regexec $end
+$upscope $end
+
+$scope function uvm_dpi_regfree $end
+$upscope $end
+
+$scope function uvm_re_match $end
+$var integer 32 v" uvm_re_match $end
+$upscope $end
+
+$scope function uvm_dump_re_cache $end
+$upscope $end
+
+$scope function uvm_glob_to_re $end
+$upscope $end
+
+$scope function uvm_revision_string $end
+$upscope $end
+
+$scope function uvm_radix_to_string $end
+$var integer 32 w" radix $end
+$upscope $end
+
+$scope function uvm_instance_scope $end
+$var reg 8 x" c [7:0] $end
+$var integer 32 y" pos $end
+$upscope $end
+
+$scope function uvm_oneway_hash $end
+$var integer 32 z" uvm_oneway_hash $end
+$var integer 32 {" seed $end
+$var reg 1 |" msb $end
+$var reg 8 }" current_byte [7:0] $end
+$var reg 32 ~" crc1 [31:0] $end
+$upscope $end
+
+$scope function uvm_create_random_seed $end
+$var integer 32 !# uvm_create_random_seed $end
+$upscope $end
+
+$scope function uvm_object_value_str $end
+$upscope $end
+
+$scope function uvm_leaf_scope $end
+$var reg 8 "# scope_separator [7:0] $end
+$var reg 8 ## bracket_match [7:0] $end
+$var integer 32 $# pos $end
+$var integer 32 %# bmatches $end
+$upscope $end
+
+$scope function uvm_vector_to_string $end
+$var reg 4096 &# value [4095:0] $end
+$var integer 32 '# size $end
+$var integer 32 (# radix $end
+$upscope $end
+
+$scope function uvm_get_array_index_int $end
+$var integer 32 )# uvm_get_array_index_int $end
+$var reg 1 *# is_wildcard $end
+$var integer 32 +# i $end
+$upscope $end
+
+$scope function uvm_get_array_index_string $end
+$var reg 1 ,# is_wildcard $end
+$var integer 32 -# i $end
+$upscope $end
+
+$scope function uvm_is_array $end
+$var reg 1 .# uvm_is_array $end
+$upscope $end
+
+$scope function uvm_has_wildcard $end
+$upscope $end
+
+$scope tas

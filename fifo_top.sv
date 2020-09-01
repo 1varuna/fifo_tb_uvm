@@ -17,6 +17,7 @@
 //import fifo_tb_pkg::*;
 
 import uvm_pkg::*;
+`include "fifo_intf.sv"
 `include "fifo_assertions.sv"
 `include "test_suite.sv"
 

@@ -1,5 +1,10 @@
 /*
-*	Add file decription
+* File: fifo_agent.sv
+* Author: Varun Anand
+* Description:
+	* UVM class which encapsulates driver, sequencer
+	* and monitor classes.
+	* NEWLY ADDED for UVM
 */
 
 class fifo_agent extends uvm_agent;

@@ -1,5 +1,7 @@
 /*
-*	ADD File description
+* File : fifo_test_uvm.sv
+* Author : Varun Anand
+* Description: UVM test class.
 */
 
 `ifndef FIFO_TEST_UVM
@@ -21,7 +23,7 @@ class fifo_test_uvm extends uvm_test;
 		// base_seq need not be created here	
 	endfunction
 
-	task run_phase(uvm_phase phase);
+	virtual task run_phase(uvm_phase phase);
 		super.run_phase(phase);
 		`uvm_info(get_type_name(),"Test RUN phase",UVM_LOW)
 		`uvm_info(get_type_name(),"Before Creating base seq",UVM_LOW)

@@ -1,7 +1,6 @@
 /*
 * File: fifo_sb.sv
 * Author: Varun Anand
-* Mentor: Varsha Anand, Verification Engineer
 * Description: Fifo Scoreboard class which helps
 * check data, sampled using input and output monitors. 
 	*/
@@ -61,7 +60,7 @@
 	      task in_queue;
 		      fifo_seq_item in_trans;		// Incoming trans from input monitor
 		      in_trans = new();
-		      $display("\t SCOREBOARD:: Inside in_queue() \n");
+		      //$display("\t SCOREBOARD:: Inside in_queue() \n");
 		      forever begin
 			      in_mon_fifo.get(in_trans);
 			      $display("\tSCOREBOARD::in_queue() : Transaction info: wr_en = %0d, rd_en = %0d, data_in=%0d\n",in_trans.wr_en,in_trans.rd_en,in_trans.data_in);

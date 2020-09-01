@@ -18,7 +18,7 @@ class fifo_input_mon extends uvm_monitor;
 
 	function new (string name,uvm_component parent);	// Class constructor
 		super.new(name,parent);			// UVM Monitor - parent
-		ap = new("ap",this);
+		ap = new("ap",this);			// Instantiate Analysis Port
 	endfunction
 
 	virtual function void build_phase(uvm_phase phase);	// *_phase() signature always accepts uvm_phase type as input
@@ -28,7 +28,7 @@ class fifo_input_mon extends uvm_monitor;
 		end
 	endfunction
 
-	task run_phase(uvm_phase phase);
+	virtual task run_phase(uvm_phase phase);
 		super.run_phase(phase);
 		forever begin
 			sample;
