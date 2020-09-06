@@ -33,7 +33,7 @@ class fifo_test_uvm extends uvm_test;
 		`uvm_info(get_type_name(),"Before Creating base seq",UVM_LOW)
 		base_seq = fifo_base_seq#(`DEF_FIFO_WIDTH)::type_id::create("fifo_base_seq");
 		`uvm_info(get_type_name(),"Created a base sequence here",UVM_LOW)
-		
+		base_seq.randomize();	
 		phase.raise_objection(this);		// IMPORTANT :
 		`uvm_info(get_type_name(),"Before Starting Sequence",UVM_LOW)
 		base_seq.start(env.fifo_ag.seqr);
